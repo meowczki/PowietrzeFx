@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.Controller">
+   <children>
+      <MenuButton layoutX="684.0" layoutY="178.0" mnemonicParsing="false" text="Plik">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Zapisz jako..." />
+          <MenuItem mnemonicParsing="false" text="Wczytaj plik" />
+        </items>
+      </MenuButton>
+      <BarChart fx:id="barChart" animated="false" categoryGap="20.0" layoutX="33.0" layoutY="67.0" prefHeight="434.0" prefWidth="645.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <JFXButton fx:id="showBtn" layoutX="686.0" layoutY="239.0" onAction="#onClickBtn" prefHeight="37.0" prefWidth="103.0" text="Button" />
+      <JFXComboBox fx:id="comboCountry" layoutX="686.0" layoutY="93.0" onAction="#onSelectedCountry" />
+      <JFXComboBox fx:id="comboCity" layoutX="686.0" layoutY="128.0" />
+   </children>
+</AnchorPane>
